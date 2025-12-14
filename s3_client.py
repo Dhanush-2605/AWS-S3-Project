@@ -1,0 +1,6 @@
+import boto3
+
+def get_s3_client():
+    return boto3.client('s3')
+print(get_s3_client())
+
