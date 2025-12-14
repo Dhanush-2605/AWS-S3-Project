@@ -16,6 +16,8 @@ def create_bucket_if_not_exists(s3_client, bucket_name):
 
 # create_bucket_if_not_exists(get_s3_client(), BUCKET_NAME)
 
+
+# to get list of buckets
 def list_buckets():
     s3 = get_s3_client()
     response = s3.list_buckets()
