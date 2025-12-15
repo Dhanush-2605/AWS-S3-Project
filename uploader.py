@@ -28,5 +28,5 @@ def upload_file(file_path, data_type):
 
 
 
-# upload_file("sample.log","logs")
+upload_file("images.jpg","images")
 
