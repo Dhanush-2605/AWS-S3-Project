@@ -25,3 +25,14 @@ def list_buckets():
         print(bucket['Name'])
 
 list_buckets()
+
+def list_objects_in_bucket(bucket_name):
+    s3 = get_s3_client()
+    response = s3.list_objects_v2(Bucket=bucket_name)
+    if 'Contents' in response:
+        for obj in response['Contents']:
+            print(obj['Key'])
+    else:
+        print(f"No objects found in bucket '{bucket_name}'.")
+
+list_objects_in_bucket(BUCKET_NAME)
